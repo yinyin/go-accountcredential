@@ -37,8 +37,5 @@ Icon
 *.out
 .glide/
 
-test.md
-test-output.txt
-
-/ast-dump
+/lookupaccountcredential
 
