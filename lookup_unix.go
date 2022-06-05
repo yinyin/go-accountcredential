@@ -31,6 +31,9 @@ func currentAccountID() (uid, gid uint32, err error) {
 	return uid, gid, nil
 }
 
+// Lookup search for given user name and group name for account credential.
+// If both user name and group name empty, nil will be return as result.
+// If only one of user or group name is given, current account will be put as the empty one.
 func Lookup(userName, groupName string) (c *syscall.Credential, err error) {
 	if (userName == "") && (groupName == "") {
 		return
